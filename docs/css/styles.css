@@ -1,63 +1,55 @@
-/* ==========================================================================
-   Design System Tokens (Anthropic Brand Theme - Ported from Design-MD)
-   ========================================================================== */
+/* Saudi Soft identity */
 :root {
-    /* Color Palette */
-    --anthropic-dark: #141413;
-    --anthropic-light: #faf9f5;
-    --anthropic-mid-gray: #b0aea5;
-    --anthropic-light-gray: #e8e6dc;
-    
-    /* Accents */
-    --accent-orange: #d97757;
-    --accent-blue: #6a9bcc;
-    --accent-green: #788c5d;
-    --accent-orange-hover: #c86343;
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 2px rgba(20, 20, 19, 0.05);
-    --shadow-md: 0 4px 12px rgba(20, 20, 19, 0.06);
-    --shadow-lg: 0 16px 32px rgba(20, 20, 19, 0.12);
-    
-    /* Transitions */
+    --sa-600: #1B8354;
+    --sa-700: #166A45;
+    --sa-500: #25935F;
+    --primary: var(--sa-600);
+    --primary-hover: var(--sa-700);
+    --success: #079455;
+    --info: #1570EF;
+    --accent-orange: var(--primary);
+    --accent-blue: var(--info);
+    --accent-green: var(--success);
+    --accent-orange-hover: var(--primary-hover);
+    --shadow-sm: 0 1px 2px 0 rgb(16 24 40 / 0.05);
+    --shadow-md: 0 4px 8px -2px rgb(16 24 40 / 0.1), 0 2px 4px -2px rgb(16 24 40 / 0.06);
+    --shadow-lg: 0 24px 48px -12px rgb(16 24 40 / 0.18);
     --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    
-    /* Typography */
-    --font-headings: 'Poppins', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-    --font-body: 'Lora', Georgia, serif;
-    --font-mono: 'JetBrains Mono', monospace;
-    
-    /* Light Mode Variables (Default) */
-    --bg-primary: var(--anthropic-light);
-    --bg-secondary: #ffffff;
-    --bg-tertiary: var(--anthropic-light-gray);
-    --text-primary: var(--anthropic-dark);
-    --text-secondary: #575754;
-    --text-muted: #8c8a82;
-    --border-color: var(--anthropic-light-gray);
-    --border-hover: var(--anthropic-mid-gray);
-    --header-bg: rgba(250, 249, 245, 0.88);
+    --font-sans-soft: "IBM Plex Sans Arabic", "Work Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-headings: var(--font-sans-soft);
+    --font-body: var(--font-sans-soft);
+    --font-mono: "Inconsolata", ui-monospace, SFMono-Regular, monospace;
+    --bg-primary: #FCFCFD;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F3F4F6;
+    --text-primary: #0D121C;
+    --text-secondary: #4D5761;
+    --text-muted: #4D5761;
+    --border-color: #E5E7EB;
+    --border-hover: #D2D6DB;
+    --header-bg: rgb(252 252 253 / 0.88);
     --card-shadow: var(--shadow-sm);
     --card-shadow-hover: var(--shadow-md);
-    --code-bg: #f5f4ef;
+    --code-bg: #F9FAFB;
 }
 
-body.dark-mode, @media (prefers-color-scheme: dark) {
-    :root {
-        --bg-primary: var(--anthropic-dark);
-        --bg-secondary: #1d1d1c;
-        --bg-tertiary: #2e2e2c;
-        --text-primary: var(--anthropic-light);
-        --text-secondary: #dcdbd5;
-        --text-muted: #a1a097;
-        --border-color: #2e2e2c;
-        --border-hover: #4a4a47;
-        --header-bg: rgba(20, 20, 19, 0.88);
-        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        --card-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.4);
-        --code-bg: #282827;
-    }
+body.dark-mode {
+    --bg-primary: #0f1724;
+    --bg-secondary: #0b1220;
+    --bg-tertiary: #1c2536;
+    --text-primary: #ffffff;
+    --text-secondary: #d0d5dd;
+    --text-muted: #b0b8c4;
+    --border-color: #2a3447;
+    --border-hover: #3d4a5c;
+    --header-bg: rgb(15 23 36 / 0.88);
+    --card-shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+    --card-shadow-hover: 0 12px 16px -4px rgb(0 0 0 / 0.35);
+    --code-bg: #141c2b;
+    --sa-600: #3daf6e;
+    --primary: var(--sa-600);
+    --accent-orange: var(--primary);
 }
 
 /* Base Styles */
@@ -87,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: var(--accent-blue);
+    color: var(--primary);
     text-decoration: none;
     transition: color var(--transition-fast);
 }

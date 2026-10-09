@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚡ N8N Workflows Hub | Universal AI & Automation Catalog</title>
+    <title>n8n workflow | Universal AI & Automation Catalog</title>
     <!-- SEO Meta Tags -->
     <meta name="description" content="Search and browse 6,400+ production-ready n8n workflow automations for AI, Webhooks, Telegram, Discord, and enterprise integrations.">
     <meta name="keywords" content="n8n workflows, automation catalog, AI agents, n8n templates, webhook workflows, python fastapi n8n">
@@ -12,10 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome 6.4.0 for Crisp Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inconsolata:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Mermaid & WebComponents for Workflow Canvas & Diagrams -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
@@ -24,64 +21,110 @@
 
     <style>
         /* ==========================================================================
-           Design System Tokens (Anthropic Brand Theme - Ported from Design-MD)
+           Saudi Soft identity
            ========================================================================== */
         :root {
-            /* Color Palette */
-            --anthropic-dark: #141413;
-            --anthropic-light: #faf9f5;
-            --anthropic-mid-gray: #b0aea5;
-            --anthropic-light-gray: #e8e6dc;
-            
-            /* Accents */
-            --accent-orange: #d97757;
-            --accent-blue: #6a9bcc;
-            --accent-green: #788c5d;
-            --accent-orange-hover: #c86343;
-            
-            /* Shadows */
-            --shadow-sm: 0 1px 2px rgba(20, 20, 19, 0.05);
-            --shadow-md: 0 4px 12px rgba(20, 20, 19, 0.06);
-            --shadow-lg: 0 16px 32px rgba(20, 20, 19, 0.12);
-            
-            /* Transitions */
+            --sa-50: #F3FCF6;
+            --sa-100: #DFF6E7;
+            --sa-200: #B8EACB;
+            --sa-300: #88D8AD;
+            --sa-400: #54C08A;
+            --sa-500: #25935F;
+            --sa-600: #1B8354;
+            --sa-700: #166A45;
+            --sa-800: #14573A;
+            --sa-900: #104631;
+
+            --gray-0: #FFFFFF;
+            --gray-25: #FCFCFD;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D2D6DB;
+            --gray-400: #9DA4AE;
+            --gray-600: #4D5761;
+            --gray-700: #384250;
+            --gray-900: #111927;
+            --gray-950: #0D121C;
+
+            --primary: var(--sa-600);
+            --primary-hover: var(--sa-700);
+            --primary-active: var(--sa-800);
+            --primary-subtle: var(--sa-50);
+            --success: #079455;
+            --warning: #DC6803;
+            --info: #1570EF;
+
+            --accent-orange: var(--primary);
+            --accent-blue: var(--info);
+            --accent-green: var(--success);
+            --accent-orange-hover: var(--primary-hover);
+
+            --shadow-sm: 0 1px 2px 0 rgb(16 24 40 / 0.05);
+            --shadow-md: 0 4px 8px -2px rgb(16 24 40 / 0.1), 0 2px 4px -2px rgb(16 24 40 / 0.06);
+            --shadow-lg: 0 24px 48px -12px rgb(16 24 40 / 0.18);
+
             --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            
-            /* Typography */
-            --font-headings: 'Poppins', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-            --font-body: 'Lora', Georgia, serif;
-            --font-mono: 'JetBrains Mono', monospace;
-            
-            /* Light Mode Variables (Default) */
-            --bg-primary: var(--anthropic-light);
-            --bg-secondary: #ffffff;
-            --bg-tertiary: var(--anthropic-light-gray);
-            --text-primary: var(--anthropic-dark);
-            --text-secondary: #575754;
-            --text-muted: #8c8a82;
-            --border-color: var(--anthropic-light-gray);
-            --border-hover: var(--anthropic-mid-gray);
-            --header-bg: rgba(250, 249, 245, 0.88);
+
+            --font-sans-soft: "IBM Plex Sans Arabic", "Work Sans", ui-sans-serif, system-ui, sans-serif;
+            --font-headings: var(--font-sans-soft);
+            --font-body: var(--font-sans-soft);
+            --font-mono: "Inconsolata", ui-monospace, SFMono-Regular, monospace;
+
+            --bg-primary: var(--gray-25);
+            --bg-secondary: var(--gray-0);
+            --bg-tertiary: var(--gray-100);
+            --text-primary: var(--gray-950);
+            --text-secondary: var(--gray-600);
+            --text-muted: var(--gray-600);
+            --border-color: var(--gray-200);
+            --border-hover: var(--gray-300);
+            --header-bg: rgb(252 252 253 / 0.88);
             --card-shadow: var(--shadow-sm);
             --card-shadow-hover: var(--shadow-md);
-            --code-bg: #f5f4ef;
+            --code-bg: var(--gray-50);
+            --topbar-height: 64px;
+            --radius-control: 10px;
+            --radius-card: 12px;
         }
 
         body.dark-mode {
-            /* Dark Mode Overrides */
-            --bg-primary: var(--anthropic-dark);
-            --bg-secondary: #1d1d1c;
-            --bg-tertiary: #2e2e2c;
-            --text-primary: var(--anthropic-light);
-            --text-secondary: #dcdbd5;
-            --text-muted: #a1a097;
-            --border-color: #2e2e2c;
-            --border-hover: #4a4a47;
-            --header-bg: rgba(20, 20, 19, 0.88);
-            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            --card-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.4);
-            --code-bg: #282827;
+            --sa-50: #0c1f16;
+            --sa-100: #0f2a1c;
+            --sa-200: #14573a;
+            --sa-300: #1b8354;
+            --sa-400: #25935f;
+            --sa-500: #3dba78;
+            --sa-600: #3daf6e;
+            --sa-700: #2f8f5a;
+            --sa-800: #1f6b42;
+            --sa-900: #88d8ad;
+
+            --gray-0: #0b1220;
+            --gray-25: #0f1724;
+            --gray-50: #141c2b;
+            --gray-100: #1c2536;
+            --gray-200: #2a3447;
+            --gray-300: #3d4a5c;
+            --gray-400: #6b7789;
+            --gray-600: #b0b8c4;
+            --gray-700: #d0d5dd;
+            --gray-900: #f0f2f5;
+            --gray-950: #ffffff;
+
+            --bg-primary: var(--gray-25);
+            --bg-secondary: var(--gray-0);
+            --bg-tertiary: var(--gray-100);
+            --text-primary: var(--gray-950);
+            --text-secondary: var(--gray-700);
+            --text-muted: var(--gray-600);
+            --border-color: var(--gray-200);
+            --border-hover: var(--gray-300);
+            --header-bg: rgb(15 23 36 / 0.88);
+            --card-shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+            --card-shadow-hover: 0 12px 16px -4px rgb(0 0 0 / 0.35);
+            --code-bg: var(--gray-50);
         }
 
         /* ==========================================================================
@@ -114,8 +157,16 @@
             color: var(--text-primary);
         }
 
+        .icon {
+            width: 1.05em;
+            height: 1.05em;
+            display: inline-block;
+            vertical-align: -0.15em;
+            flex-shrink: 0;
+        }
+
         a {
-            color: var(--accent-blue);
+            color: var(--primary);
             text-decoration: none;
             transition: color var(--transition-fast);
         }
@@ -135,7 +186,7 @@
             font-family: var(--font-headings);
             font-weight: 600;
             padding: 10px 20px;
-            border-radius: 8px;
+            border-radius: var(--radius-control);
             border: none;
             cursor: pointer;
             font-size: 0.95rem;
@@ -150,7 +201,7 @@
         .btn-primary:hover {
             background-color: var(--accent-orange-hover);
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(217, 119, 87, 0.3);
+            box-shadow: 0 4px 12px rgb(27 131 84 / 0.3);
         }
 
         .btn-outline {
@@ -189,8 +240,9 @@
 
         .header-container {
             max-width: 1300px;
+            height: var(--topbar-height);
             margin: 0 auto;
-            padding: 14px 50px;
+            padding: 0 32px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -291,7 +343,7 @@
             font-size: 0.8rem;
             font-weight: 600;
             color: var(--accent-orange);
-            background-color: rgba(217, 119, 87, 0.1);
+            background-color: var(--primary-subtle);
             padding: 6px 16px;
             border-radius: 30px;
             margin-bottom: 20px;
@@ -313,7 +365,7 @@
         }
 
         .hero-section .highlight {
-            background: linear-gradient(120deg, var(--accent-orange) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(90deg, var(--sa-600) 0%, var(--sa-500) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -362,7 +414,7 @@
         #search-input:focus {
             outline: none;
             border-color: var(--accent-orange);
-            box-shadow: 0 0 0 4px rgba(217, 119, 87, 0.15), var(--shadow-md);
+            box-shadow: 0 0 0 4px rgb(27 131 84 / 0.15), var(--shadow-md);
         }
 
         .clear-btn {
@@ -446,7 +498,7 @@
 
         .btn-toggle-cats:hover {
             border-color: var(--accent-orange);
-            background-color: rgba(217, 119, 87, 0.08);
+            background-color: var(--primary-subtle);
             transform: translateY(-1px);
         }
 
@@ -499,7 +551,7 @@
         .brand-card {
             background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
-            border-radius: 14px;
+            border-radius: var(--radius-card);
             padding: 24px;
             display: flex;
             flex-direction: column;
@@ -593,18 +645,18 @@
         }
 
         .complexity-low {
-            background-color: rgba(120, 140, 93, 0.15);
-            color: var(--accent-green);
+            background-color: rgb(7 148 85 / 0.12);
+            color: var(--success);
         }
 
         .complexity-medium {
-            background-color: rgba(106, 155, 204, 0.15);
-            color: var(--accent-blue);
+            background-color: rgb(21 112 239 / 0.12);
+            color: var(--info);
         }
 
         .complexity-high {
-            background-color: rgba(217, 119, 87, 0.15);
-            color: var(--accent-orange);
+            background-color: rgb(220 104 3 / 0.12);
+            color: var(--warning);
         }
 
         .btn-card-action {
@@ -615,7 +667,7 @@
             color: var(--text-primary);
             border: 1px solid var(--border-color);
             padding: 6px 14px;
-            border-radius: 8px;
+            border-radius: var(--radius-control);
             cursor: pointer;
             transition: all var(--transition-fast);
             display: inline-flex;
@@ -715,7 +767,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(20, 20, 19, 0.5);
+            background-color: rgb(13 18 28 / 0.4);
             backdrop-filter: blur(4px);
         }
 
@@ -767,7 +819,7 @@
             background-color: var(--bg-tertiary);
             color: var(--text-secondary);
             padding: 4px 10px;
-            border-radius: 4px;
+            border-radius: 8px;
         }
 
         .drawer-actions {
@@ -823,7 +875,7 @@
         .sidebar-info-card {
             background-color: var(--bg-primary);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: var(--radius-control);
             padding: 14px;
             margin-bottom: 16px;
             font-size: 0.85rem;
@@ -846,7 +898,7 @@
         .json-preview {
             background-color: var(--code-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: var(--radius-control);
             padding: 20px;
             font-family: var(--font-mono);
             font-size: 0.85rem;
@@ -921,8 +973,8 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background-color: var(--anthropic-dark);
-            color: #ffffff;
+            background-color: var(--gray-950);
+            color: var(--gray-25);
             padding: 12px 24px;
             border-radius: 30px;
             box-shadow: var(--shadow-lg);
@@ -944,8 +996,8 @@
         }
 
         body.dark-mode .toast {
-            background-color: var(--anthropic-light);
-            color: var(--anthropic-dark);
+            background-color: var(--gray-950);
+            color: var(--gray-25);
         }
 
         /* ==========================================================================
@@ -964,13 +1016,13 @@
 
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(217, 119, 87, 0.4);
+                box-shadow: 0 0 0 0 rgb(27 131 84 / 0.4);
             }
             70% {
-                box-shadow: 0 0 0 8px rgba(217, 119, 87, 0);
+                box-shadow: 0 0 0 8px rgb(27 131 84 / 0);
             }
             100% {
-                box-shadow: 0 0 0 0 rgba(217, 119, 87, 0);
+                box-shadow: 0 0 0 0 rgb(27 131 84 / 0);
             }
         }
 
@@ -990,26 +1042,56 @@
 </head>
 <body class="light-mode">
 
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+        <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-user-check" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 11 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 18c-4.51 2-5-2-7-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2m-7.07-4.93 1.41-1.41M17.66 6.34l1.41-1.41M2 12h2m16 0h2M6.34 6.34 4.93 4.93m12.73 14.14 1.41 1.41" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="i-folder-open" viewBox="0 0 24 24"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-shapes" viewBox="0 0 24 24"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="17.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 15V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="i-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect width="8" height="8" x="13" y="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-git-fork" viewBox="0 0 24 24"><circle cx="12" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 17h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="i-settings" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </svg>
+
+
     <!-- Header -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo-area" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="logo-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"></use></svg></div>
                 <div class="logo-text">
-                    <h1>N8N Workflows Hub</h1>
+                    <h1>n8n workflow</h1>
                     <span>Universal Automation Catalog</span>
                 </div>
             </div>
             
             <nav class="nav-links">
                 <span class="curator-tag">
-                    <i class="fa-solid fa-user-check"></i> Curated by <strong>Mohammed Abo Alrejal</strong>
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-user-check"></use></svg> Curated by <strong>Mohammed Abo Alrejal</strong>
                 </span>
                 <a href="https://github.com/aboalrejal-ai/n8n-workflows" target="_blank" class="btn btn-outline btn-sm">
-                    <i class="fa-brands fa-github"></i> Star on GitHub
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"></use></svg> Star on GitHub
                 </a>
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
-                    <i class="fa-solid fa-moon"></i>
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-moon"></use></svg>
                 </button>
             </nav>
         </div>
@@ -1030,17 +1112,17 @@
             <!-- Search Box -->
             <div class="filter-box">
                 <div class="search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"></use></svg>
                     <input type="text" id="search-input" placeholder="Search workflows by keyword, node, integration (e.g. telegram, gmail, ai agent)..." autocomplete="off">
-                    <button id="clear-search" class="clear-btn" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+                    <button id="clear-search" class="clear-btn" style="display:none;"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-x"></use></svg></button>
                 </div>
             </div>
             
             <!-- Stats Row -->
             <div class="stats-row">
-                <div class="stat-pill"><i class="fa-solid fa-folder-open"></i> <span id="stat-count">6,435</span> Workflows</div>
-                <div class="stat-pill"><i class="fa-solid fa-shapes"></i> <span id="stat-cat-count">52</span> Categories</div>
-                <div class="stat-pill"><i class="fa-solid fa-shield-halved"></i> Production Verified</div>
+                <div class="stat-pill"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-folder-open"></use></svg> <span id="stat-count">6,435</span> Workflows</div>
+                <div class="stat-pill"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shapes"></use></svg> <span id="stat-cat-count">52</span> Categories</div>
+                <div class="stat-pill"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield-check"></use></svg> Production Verified</div>
             </div>
         </section>
 
@@ -1049,9 +1131,9 @@
             <!-- Category Pills Navigation -->
             <div class="category-pills-container">
                 <div class="category-header-row">
-                    <span class="category-title"><i class="fa-solid fa-shapes"></i> Browse Categories</span>
+                    <span class="category-title"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shapes"></use></svg> Browse Categories</span>
                     <button id="btn-toggle-cats" class="btn-toggle-cats" style="display:none;">
-                        <span>Show More</span> <i class="fa-solid fa-chevron-down"></i>
+                        <span>Show More</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
                     </button>
                 </div>
                 <div class="category-pills" id="category-pills">
@@ -1069,9 +1151,9 @@
 
             <!-- Pagination -->
             <div class="pagination-container" id="pagination-container" style="display: none;">
-                <button id="prev-page" class="page-btn" disabled><i class="fa-solid fa-chevron-left"></i> Previous</button>
+                <button id="prev-page" class="page-btn" disabled><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-left"></use></svg> Previous</button>
                 <span id="page-info" class="page-info">Page 1 of 1</span>
-                <button id="next-page" class="page-btn">Next <i class="fa-solid fa-chevron-right"></i></button>
+                <button id="next-page" class="page-btn">Next <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-right"></use></svg></button>
             </div>
         </section>
     </main>
@@ -1092,13 +1174,13 @@
                 </div>
                 <div class="drawer-actions">
                     <button id="btn-copy-json" class="btn btn-primary btn-sm">
-                        <i class="fa-solid fa-copy"></i> Copy JSON
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"></use></svg> Copy JSON
                     </button>
                     <button id="btn-download-json" class="btn btn-outline btn-sm">
-                        <i class="fa-solid fa-download"></i> Download
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"></use></svg> Download
                     </button>
                     <button id="btn-close-drawer" class="btn-close" aria-label="Close Panel">
-                        <i class="fa-solid fa-xmark"></i>
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-x"></use></svg>
                     </button>
                 </div>
             </div>
@@ -1109,19 +1191,19 @@
                 <aside class="drawer-sidebar">
                     <div class="sidebar-section-title">WORKFLOW DETAILS</div>
                     <div class="sidebar-info-card">
-                        <strong><i class="fa-solid fa-diagram-project"></i> Category</strong>
+                        <strong><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-workflow"></use></svg> Category</strong>
                         <span id="info-cat">General</span>
                     </div>
                     <div class="sidebar-info-card">
-                        <strong><i class="fa-solid fa-bolt"></i> Trigger Type</strong>
+                        <strong><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"></use></svg> Trigger Type</strong>
                         <span id="info-trigger">Webhook</span>
                     </div>
                     <div class="sidebar-info-card">
-                        <strong><i class="fa-solid fa-layer-group"></i> Total Nodes</strong>
+                        <strong><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-layers"></use></svg> Total Nodes</strong>
                         <span id="info-nodes-count">0</span>
                     </div>
                     <div class="sidebar-info-card">
-                        <strong><i class="fa-solid fa-code-fork"></i> Complexity Level</strong>
+                        <strong><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-git-fork"></use></svg> Complexity Level</strong>
                         <span id="info-complexity">Low</span>
                     </div>
                 </aside>
@@ -1129,7 +1211,7 @@
                 <!-- Content Panel -->
                 <div class="drawer-content-wrapper">
                     <h4 style="font-family: var(--font-headings); margin-bottom: 12px; font-weight: 700;">
-                        <i class="fa-solid fa-code"></i> Workflow JSON Definition
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"></use></svg> Workflow JSON Definition
                     </h4>
                     <pre class="json-preview" id="json-preview">Loading JSON...</pre>
                 </div>
@@ -1142,15 +1224,15 @@
         <div class="footer-container">
             <div class="footer-left">
                 <div class="footer-logo">
-                    <i class="fa-solid fa-bolt" style="color: var(--accent-orange);"></i> N8N Workflows Hub
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"></use></svg> n8n workflow
                 </div>
                 <p>Curating 6,400+ verified production workflows for modern AI & automation workflows.</p>
             </div>
             <div class="footer-right">
                 <p class="copyright">&copy; 2026 Mohammed Abo Alrejal. Released under the MIT License.</p>
                 <div class="social-icons">
-                    <a href="https://github.com/aboalrejal-ai/n8n-workflows" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                    <a href="mailto:mohammed.abualrejal@gmail.com" aria-label="Contact Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/aboalrejal-ai/n8n-workflows" target="_blank" aria-label="GitHub Profile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"></use></svg></a>
+                    <a href="mailto:mohammed.abualrejal@gmail.com" aria-label="Contact Email"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"></use></svg></a>
                 </div>
             </div>
         </div>
@@ -1158,7 +1240,7 @@
 
     <!-- Toast Notification -->
     <div id="toast" class="toast">
-        <i class="fa-solid fa-check-circle"></i> <span id="toast-message">Action successful!</span>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-circle-check"></use></svg> <span id="toast-message">Action successful!</span>
     </div>
 
     <!-- JavaScript Application Logic -->
@@ -1203,11 +1285,11 @@
             if (savedTheme === 'dark') {
                 document.body.classList.remove('light-mode');
                 document.body.classList.add('dark-mode');
-                themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                themeToggleBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sun"></use></svg>';
             } else {
                 document.body.classList.remove('dark-mode');
                 document.body.classList.add('light-mode');
-                themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                themeToggleBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-moon"></use></svg>';
             }
         }
 
@@ -1215,13 +1297,13 @@
             if (document.body.classList.contains('dark-mode')) {
                 document.body.classList.remove('dark-mode');
                 document.body.classList.add('light-mode');
-                themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                themeToggleBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-moon"></use></svg>';
                 localStorage.setItem('theme', 'light');
                 showToast('Light Mode Activated ☀️');
             } else {
                 document.body.classList.remove('light-mode');
                 document.body.classList.add('dark-mode');
-                themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                themeToggleBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sun"></use></svg>';
                 localStorage.setItem('theme', 'dark');
                 showToast('Dark Mode Activated 🌙');
             }
@@ -1287,9 +1369,9 @@
             btnToggleCats.addEventListener('click', () => {
                 const isExpanded = categoryPills.classList.toggle('expanded');
                 if (isExpanded) {
-                    btnToggleCats.innerHTML = '<span>Show Less</span> <i class="fa-solid fa-chevron-up"></i>';
+                    btnToggleCats.innerHTML = '<span>Show Less</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-up"></use></svg>';
                 } else {
-                    btnToggleCats.innerHTML = '<span>Show More</span> <i class="fa-solid fa-chevron-down"></i>';
+                    btnToggleCats.innerHTML = '<span>Show More</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"></use></svg>';
                 }
             });
         }
@@ -1348,7 +1430,7 @@
                 console.error(err);
                 brandsGrid.innerHTML = `
                     <div class="empty-state">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-triangle-alert"></use></svg>
                         <h4>Failed to load workflows</h4>
                         <p>Make sure python api_server.py is running.</p>
                     </div>`;
@@ -1360,7 +1442,7 @@
             if (!workflows || !workflows.length) {
                 brandsGrid.innerHTML = `
                     <div class="empty-state">
-                        <i class="fa-solid fa-folder-open"></i>
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-folder-open"></use></svg>
                         <h4>No workflows found</h4>
                         <p>Try searching for a different keyword or category.</p>
                     </div>`;
@@ -1386,9 +1468,9 @@
                 return `
                 <div class="brand-card">
                     <div class="card-swatches">
-                        <span class="swatch-dot" style="background: var(--accent-orange);" title="Node count: ${nodeCount}"><i class="fa-solid fa-gear"></i></span>
-                        <span class="swatch-dot" style="background: var(--accent-blue);" title="Trigger: ${triggerType}"><i class="fa-solid fa-bolt"></i></span>
-                        <span class="swatch-dot" style="background: var(--accent-green);" title="Verified"><i class="fa-solid fa-check"></i></span>
+                        <span class="swatch-dot" style="background: var(--accent-orange);" title="Node count: ${nodeCount}"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-settings"></use></svg></span>
+                        <span class="swatch-dot" style="background: var(--accent-blue);" title="Trigger: ${triggerType}"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"></use></svg></span>
+                        <span class="swatch-dot" style="background: var(--accent-green);" title="Verified"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg></span>
                     </div>
                     <div class="brand-category">${escapeHtml(wf.category || 'General')}</div>
                     <h3>${escapeHtml(wf.name || 'Untitled Workflow')}</h3>
@@ -1397,7 +1479,7 @@
                     <div class="card-footer">
                         <span class="complexity-badge ${complexityClass}">${complexityText} (${nodeCount} nodes)</span>
                         <button class="btn-card-action" onclick="openDrawer('${encodedFn}')">
-                            Inspect <i class="fa-solid fa-arrow-right"></i>
+                            Inspect <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
                         </button>
                     </div>
                 </div>`;

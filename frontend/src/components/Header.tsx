@@ -28,7 +28,7 @@ export default function Header() {
             <Bolt size={28} />
           </div>
           <div className="logo-text">
-            <h1 style={{ fontSize: '1.25rem', fontWeight: 800, margin: 0 }}>N8N Workflows Hub</h1>
+            <h1 style={{ fontSize: '1.25rem', fontWeight: 800, margin: 0 }}>n8n workflow</h1>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Universal Automation Catalog</span>
           </div>
         </Link>
