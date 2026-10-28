@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/assets/cover.png" alt="n8n-workflows" width="100%"></p>
+
 # n8n Workflow Collection: The Ultimate Self-Hosted Automation Library
 
 <div align="center">
